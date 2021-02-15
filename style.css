@@ -16,17 +16,21 @@ html{
   height: 100vh;
 }
 .play{
-
   margin: auto;
   background-color: rgb(238, 234, 234);
 }
 
-/** ADD Layout CSS for Player one and player two */*
-.playerOne,
-.playerTwo,
-.playArea {
+/** ADD Layout CSS for Player one and player two */
+.playerOne {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerTwo {
+  display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
@@ -38,6 +42,7 @@ html{
 .player h1{
   font-size: 3rem;
   font-weight: 100;
+  margin: 0;
 }
 
 #roundPlayr1,
@@ -58,6 +63,7 @@ html{
   font-size: 6rem;
   font-weight: 100;
   color: red;
+  margin-top: 0;
 }
 
 .current {
@@ -81,4 +87,39 @@ html{
   margin: 0;
 }
 /********************************************************************************/
+/** ADD Layout CSS for Play panel and Buttons */
+.newGameGroupe,
+.rollDiceGroupe,
+.holdGroupe {
+  font-size: 0.9rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.rollDiceGroupe,
+.holdGroupe {
+  justify-content: end;
+}
+
+.groupOne,
+.groupTwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ion-icon{
+  font-size: 1.6rem;
+  color: red;
+  padding-right: 0.7rem;
+}
+.image {
+  text-align: center;
+  margin: 2rem 0;
+}
+#image {
+  width: 4rem;
+  height: 4rem;
+}  
 
