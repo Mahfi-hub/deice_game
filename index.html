@@ -4,14 +4,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--  IMPORT IONIC CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+  <!-- IMPORT STYLE.CSS -->
   <link rel="stylesheet" href="style.css">
   <title>Jeu Dé</title>
 </head>
 <body>
+  <div class="wrapper">
+    <ion-grid class="play">
+    <ion-row>
+      <ion-col size="12" size-md>
+        <!-- Player 1 Pnael -->
+        <div class="playerOne">
+          <div class="player">
+            <h1>PLAYER 1</h1>
+            <div id="roundPlayr1"></div>
+          </div>
+          <h2 class="globalPoint" id="globalPlayerOne"></h2>
+          <div class="current">
+            <h4>CURRENT</h4>
+            <h4 class="currentPoint" id="currentPlayer1"></h4>
+          </div>
+        </div>
+      </ion-col>
+      <!-- Play Panel and button -->
+      <ion-col size="12" size-md>
+        <div class="playArea">
+          <div class="newGameGroupe">
+            <ion-icon name="add-circle-outline" id='new'></ion-icon>
+            <span class="titleBtn">NEW GAME</span>
+          </div>
+          <img id='image' alt='Dice'>
+          <div class="rollDiceGroupe">
+            <ion-icon name="sync-outline" id='rollDice'></ion-icon>
+            <span class="titleBtn">ROLL DICE</span>
+          </div>
+          <div class="holdGroupe">
+            <ion-icon name="download-outline" id='hold'></ion-icon>
+            <span class="titleBtn">HOLD</span>
+          </div>
+        </div>
+      </ion-col>
+      <!-- Player 2 Panel --> 
+      <ion-col size="12" size-md>
+        <div class="PlayerTwo">
+          <div class="player">
+            <h1>PLAYER 1</h1>
+            <div id="roundPlayr1"></div>
+          </div>
+          <h2 class="globalPoint" id="globalPlayerTow"></h2>
+          <div class="current">
+            <h4>CURRENT</h4>
+            <h4 class="currentPoint" id="currentPlayer1"></h4>
+          </div>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  </div>
   
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
