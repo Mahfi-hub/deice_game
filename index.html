@@ -1,17 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+  <!--  IMPORT IONIC CDN -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+  <!-- IMPORT STYLE.CSS -->
   <link rel="stylesheet" href="style.css">
   <title>Jeu Dé</title>
 </head>
+
 <body>
-  
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <div class="wrapper">
+    <ion-grid class="play">
+      <ion-row>
+        <ion-col size="12" size-md>
+          <!-- Player 1 Pnael -->
+          <div class="playerOne" id="panelPlayer1">
+            <div class="player">
+              <h1 id="titlePlayer1">PLAYER 1</h1>
+              <div id="roundPlayer1"></div>
+            </div>
+            <h2 class="globalPoint" id="globalPlayer1">00</h2>
+            <div class="current">
+              <h4>CURRENT</h4>
+              <h4 class="currentPoint" id="currentPlayer1">0</h4>
+            </div>
+          </div>
+        </ion-col>
+        <!-- Play Panel and button -->
+        <ion-col size="12" size-md>
+          <div class="playArea">
+            <ion-row>
+              <ion-col size="4" size-md='12' class="groupOne">
+                <div class="newGameGroupe">
+                  <ion-icon name="add-circle-outline"></ion-icon>
+                  <span class="titleBtn" id='new'>NEW GAME</span>
+                </div>
+              </ion-col>
+              <ion-col size="4" size-md='12' class="image">
+                <img src="./images/6c.gif" id='image' alt='Dice'>
+              </ion-col>
+              <ion-col size="4" size-md='12' class="groupTwo">
+                <div class="rollDiceGroupe">
+                  <ion-icon name="sync-outline" ></ion-icon>
+                  <span class="titleBtn" id='rollDice'>ROLL DICE</span>
+                </div>
+                <div class="holdGroupe">
+                  <ion-icon name="download-outline" ></ion-icon>
+                  <span class="titleBtn" id='hold'>HOLD</span>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+        <!-- Player 2 Panel -->
+        <ion-col size="12" size-md>
+          <div class="playerTwo" id="panelPlayer2">
+            <div class="player">
+              <div id="roundPlayer2"></div>
+              <h1 id="titlePlayer2">PLAYER 2</h1>
+            </div>
+            <h2 class="globalPoint" id="globalPlayer2">00</h2>
+            <div class="current">
+              <h4>CURRENT</h4>
+              <h4 class="currentPoint" id="currentPlayer2">0</h4>
+            </div>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+
   <script src="script.js"></script>
 </body>
+
 </html>

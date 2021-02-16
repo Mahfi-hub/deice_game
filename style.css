@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+
+*,
+*::after,
+*::before{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+body{
+  height: 100vh;
+  background: linear-gradient(45deg,#b19e89,#8d6d40) ;
+}
+
+.wrapper{
+  margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+
+.play{
+  /* margin: auto ; */
+  height: 100%;
+  background-color: rgb(238, 234, 234);
+}
+
+/** ADD Layout CSS for Player one and player two */
+.playerOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerTwo {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.player h1{
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+#roundPlayer1,
+#roundPlayer2 {
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* display: none; */
+}
+
+h2.globalPoint {
+  font-size: 2rem;
+  font-weight: 100;
+  color: red;
+  margin-top: 0;
+}
+
+.current {
+  background-color: rgb(245, 71, 71);
+  width: 10rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-weight: 700;
+}
+.current h4{
+  font-size: 1.2rem;
+  margin: 0;
+}
+.currentPoint{
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+/********************************************************************************/
+/** ADD Layout CSS for Play panel and Buttons */
+.newGameGroupe,
+.rollDiceGroupe,
+.holdGroupe {
+  font-size: 0.9rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.rollDiceGroupe,
+.holdGroupe {
+  justify-content: end;
+}
+
+.groupOne,
+.groupTwo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ion-icon{
+  font-size: 1.6rem;
+  color: red;
+  padding-right: 0.4rem;
+}
+
+.image {
+  text-align: center;
+  margin: 2rem 0;
+}
+#image {
+  width: 4rem;
+  height: 4rem;
+} 
+
+#winner{
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: rgb(202, 143, 143);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleBtn:hover{
+  cursor: pointer;
+}
+.titleBtn:active{
+  background-color: rgba(201, 173, 173, 0.795);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+/********************************************************************************/
+/** ADD Layout CSS for Desktop design > 768px with media querie */
+
+@media screen and (min-width : 768px){
+  .wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .playerTwo {
+    flex-direction: column;
+  }
+
+  .newGameGroupe,
+  .rollDiceGroupe,
+  .holdGroupe {
+  justify-content: center;
+  }
+  
+  .playerOne,
+  .playerTwo {
+    padding-top: 5rem ;
+  }
+  .current{
+    margin : 6rem 0rem;
+  }
+  .playArea {
+    height: 100%;
+    display: flex;
+  }
+  .player h1{
+    font-size: 3rem;
+  }
+  h2.globalPoint {
+    font-size: 6rem;
+  }
+  h1#winner{
+    font-size: 2rem;
+  }
+}
+
+/***Media for screen height < 740px)******/
+@media screen and (max-height : 740px){
+  .current{
+    width: 8rem;
+    height: 5.5rem;
+  }
+  .globalPoint {
+    font-size: 4rem;
+    font-weight: 100;
+  }
+}
+
+/**************************************************/
+/*** Design Buttons hover and click ****************/
+
+
+
