@@ -13,7 +13,7 @@ html{
 }
 body{
   height: 100vh;
-  background-color: red;
+  background: linear-gradient(45deg,#b19e89,#8d6d40) ;
 }
 
 .wrapper{
